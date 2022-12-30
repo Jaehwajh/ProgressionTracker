@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Jaehwajh/ProgressionTracker#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "cloudinary": "^1.33.0",
     "connect-mongo": "^3.2.0",
     "dotenv": "^16.0.2",
     "ejs": "^3.1.6",

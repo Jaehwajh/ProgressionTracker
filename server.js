@@ -8,6 +8,7 @@ const methodOverride = require("method-override");
 const flash = require("express-flash");
 const logger = require("morgan");
 const connectDB = require("./config/database");
+const mainRoutes = require("./routes/main");
 
 // accessing config folder
 require("dotenv").config({path: "./config/.env"});
@@ -55,3 +56,6 @@ app.use(flash());
 app.listen(process.env.PORT, () => {
     console.log("Server is up and running")
 });
+
+// Router setup
+app.use("/", mainRoutes);
