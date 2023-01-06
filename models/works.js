@@ -12,6 +12,10 @@ const WorkSchema = new mongoose.Schema({
     createdAt: {
         type: Date,
         default: Date.now,
+    },
+    description: {
+        type: String,
+        require: true,
     }
 });
 
