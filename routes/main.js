@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const {ensureAuth, ensureGuest} = require("..middleware/auth");
+const { ensureAuth, ensureGuest } = require("../middleware/auth");
 const homepageController = require("../controllers/homepage");
 const authController = require("../controllers/auth");
+const dashboardController = require("../controllers/dashboard");
 
 // Loading Homepage
 router.get("/", homepageController.getHomepage);
@@ -15,4 +16,7 @@ router.get("/logout", authController.logout);
 router.get("/signup", authController.getSignup);
 router.post("/signup", authController.postSignup);
 
+router.get("/dashboard", ensureAuth, dashboardController.getDashboard);
+
 module.exports = router;
+
