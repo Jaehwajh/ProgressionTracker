@@ -1,26 +1,38 @@
 <%- include("partials/header") -%>
 
 <body>
-    <nav>
-        <ul>
-            <li>
-                <a href="#">Calender</a>
-            </li>
-            <li>
-                <a href="#">Statistics</a>
-            </li>
-            <li>
-                <a href="/logout">Log Out</a>
-            </li>
-        </ul>
-    </nav>
+    <div class="container">
+        <div class="flex-nav sidebar">
+            <nav class="navi">
+                <ul class="list">
+                    <li>
+                        <a href="#">Calender</a>
+                    </li>
+                    <li>
+                        <a href="#">Statistics</a>
+                    </li>
+                    <li>
+                        <a href="/logout">Log Out</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
-    <h1>This is dashboard</h1>
+        <div class="dashboard">
+            <h1>This is dashboard</h1>
 
-    <h2>Welcome back <%= user.userName %></h2>
+            <h2>Welcome back <%= user.userName %> you've made [number] entries this month</h2>
 
-    <!-- Works for this month -->
-    <div>
-        
+            <div class="works">
+                <h1>Display Work (current month)</h1>
+            </div>
+
+            <div class="pastWorks">
+                <h1>Last months work</h1>
+            </div>
+
+            <a href="#">View more</a>
+        </div>
+
     </div>
 </body>
