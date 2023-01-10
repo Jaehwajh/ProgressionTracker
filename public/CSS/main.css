@@ -7,8 +7,9 @@ body{
 /* container */
 .container{
     display: flex;
-    justify-content: flex-start
+    flex-direction: row;
 }
+
 /* navigation bar */
 .sidebar{
     height:100vh;
@@ -36,8 +37,31 @@ body{
     width: 100%;
 }
 
+.box{
+    height: 85%;
+}
+
 
 .works, .pastWorks{
     height: 50%;
     background-color: whitesmoke;
+}
+
+.add{
+    position: relative;
+    padding: 8px 15px;
+    border: 1.8px solid rgb(67, 67, 255);
+    border-radius: 5px;
+    z-index: 1;
+    left: 95%;
+    bottom: 85%;
+}
+
+.add > h1{
+    margin: 0;
+}
+
+.viewMore{
+    text-decoration: none;
+    font-size: 1.5em;
 }

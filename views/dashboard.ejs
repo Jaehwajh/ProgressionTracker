@@ -19,20 +19,25 @@
         </div>
 
         <div class="dashboard">
-            <h1>This is dashboard</h1>
+            <div class="box" >
+                <h1>This is dashboard</h1>
 
-            <h2>Welcome back <%= user.userName %> you've made [number] entries this month</h2>
+                <h2>Welcome back <%= user.userName %> you've made [number] entries this month</h2>
 
-            <div class="works">
-                <h1>Display Work (current month)</h1>
+                <div class="works">
+                    <h1>Display Work (current month)</h1>
+                </div>
+
+                <div class="pastWorks">
+                    <h1>Last months work</h1>
+                </div>
+
+                <a class="viewMore" href="#">View more</a>
+
+
             </div>
 
-            <div class="pastWorks">
-                <h1>Last months work</h1>
-            </div>
-
-            <a href="#">View more</a>
+            <button class="add"><h1>+</h1></button>
         </div>
-
     </div>
 </body>
