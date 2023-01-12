@@ -1,6 +1,14 @@
 const mongoose = require("mongoose");
 
 const WorkSchema = new mongoose.Schema({
+    title: {
+        type: String,
+        require: true,
+    },
+    tag: {
+        type: String,
+        require: true,
+    },
     cloudinaryId: {
         type: String,
         require: true,

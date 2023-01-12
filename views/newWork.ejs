@@ -1,3 +1,49 @@
 <%- include('partials/header') -%>
 
-<!-- image -->
+    <div>
+        <h1>What do you want to do?</h1>
+    
+        <button>Upload File</button>
+    
+        <button>Make Entry</button>
+    </div>
+    
+    
+    <!--Upload Image -->
+    <div class="mt-5">
+        <h2>Upload your work</h2>
+        <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+          <div class="mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input type="text" class="form-control" id="title" name="title">
+          </div>
+          <div class="mb-3">
+            <label for="imgUpload" class="form-label">Image</label>
+            <input type="file" class="form-control" id="imageUpload" name="file">
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" id="description" name="description"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+        </form>
+      </div>
+    
+    
+      <!-- Entries -->
+      <div class="mt-5">
+        <h2>Make an Entry</h2>
+        <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+          <div class="mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input type="text" class="form-control" id="title" name="title">
+          </div>
+          <div class="mb-3">
+            <label for="entry" class="form-label">Entry</label>
+            <textarea class="form-control" id="entry" name="entry"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+        </form>
+      </div>
+    
+<%- include("partials/footer") -%> 

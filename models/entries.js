@@ -12,6 +12,10 @@ const entrySchema = new mongoose.Schema({
     entry: {
         type: String,
         require: true,
+    },
+    type: {
+        type: String,
+        require: true
     }
 });
 
