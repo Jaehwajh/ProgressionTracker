@@ -9,11 +9,11 @@ const entrySchema = new mongoose.Schema({
         type: Date,
         default: Date.now,
     },
-    entry: {
+    description: {
         type: String,
         require: true,
     },
-    type: {
+    tag: {
         type: String,
         require: true
     }
