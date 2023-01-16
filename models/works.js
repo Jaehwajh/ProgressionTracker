@@ -3,15 +3,19 @@ const mongoose = require("mongoose");
 const WorkSchema = new mongoose.Schema({
     title: {
         type: String,
-        require: true,
+        required: true,
     },
     tag: {
         type: String,
-        require: true,
+        required: true,
+    },
+    image: {
+        type: String,
+        require: true
     },
     cloudinaryId: {
         type: String,
-        require: true,
+        required: true,
     },
     user: {
         type: mongoose.Schema.Types.ObjectId,
@@ -23,8 +27,10 @@ const WorkSchema = new mongoose.Schema({
     },
     description: {
         type: String,
-        require: true,
-    }
+    },
+    link: {
+        type: String,
+    },
 });
 
 module.exports = mongoose.model("Work", WorkSchema);

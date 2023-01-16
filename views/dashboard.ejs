@@ -26,6 +26,12 @@
 
                 <div class="works">
                     <h1 class="title">*Display Work (current month)*</h1>
+
+                    <% const arr = entries.concat(works) %> 
+
+                    <% arr.forEach(element => {%>
+                        <p><%= element.title %> <br> <%= element.createdAt %> <br> <img class="image" src="<%= element.image %>" alt=""> </p>
+                    <%})%>
                 </div>
 
                 <div class="pastWorks">

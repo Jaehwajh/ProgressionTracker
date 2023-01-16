@@ -9,7 +9,7 @@ const flash = require("express-flash");
 const logger = require("morgan");
 const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
-
+const entryRoutes = require("./routes/entries");
 
 // accessing config folder
 require("dotenv").config({path: "./config/.env"});
@@ -60,3 +60,4 @@ app.listen(process.env.PORT, () => {
 
 // Router setup
 app.use("/", mainRoutes);
+app.use("/entry", entryRoutes);

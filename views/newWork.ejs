@@ -11,8 +11,12 @@
     
     <!--Upload Image -->
     <div class="mt-5">
-        <h2>Upload your work</h2>
-        <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+        <h2>Upload a file</h2>
+        <form action="/entry/createFile" enctype="multipart/form-data" method="POST">
+          <div class="mb-3">
+            <label for="fileUpload" class="form-label">File</label>
+            <input type="file" class="form-control" id="fileUpload" name="file">
+          </div>
           <div class="mb-3">
               <label for="title" class="form-label">Title</label>
               <input type="text" class="form-control" id="title" name="title">
@@ -20,10 +24,10 @@
           <div class="mb-3">
             <label for="tag" class="form-label">Tag</label>
             <input type="text" class="form-control" id="tag" name="tag">
-        </div>
+          </div>
           <div class="mb-3">
-            <label for="fileUpload" class="form-label">File</label>
-            <input type="file" class="form-control" id="fileUpload" name="file">
+            <label for="link" class="form-label">Link</label>
+            <input type="link" class="form-control" id="link" name="link" placeholder="optional">
           </div>
           <div class="mb-3">
             <label for="description" class="form-label">Description</label>
@@ -37,7 +41,7 @@
       <!-- Entries -->
       <div class="mt-5">
         <h2>Make an Entry</h2>
-        <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+        <form action="/entry/createEntry" method="POST">
           <div class="mb-3">
               <label for="title" class="form-label">Title</label>
               <input type="text" class="form-control" id="title" name="title">
@@ -47,8 +51,8 @@
             <input type="text" class="form-control" id="tag" name="tag">
         </div>
           <div class="mb-3">
-            <label for="entry" class="form-label">Entry</label>
-            <textarea class="form-control" id="entry" name="entry"></textarea>
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" id="description" name="description"></textarea>
           </div>
           <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
         </form>

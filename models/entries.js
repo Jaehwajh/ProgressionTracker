@@ -1,22 +1,25 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 const entrySchema = new mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
+        ref: "User"
     },
     createdAt: {
         type: Date,
-        default: Date.now,
+        default: Date.now
+    },
+    title: {
+        type: String,
+        required: true
     },
     description: {
         type: String,
-        require: true,
     },
     tag: {
         type: String,
-        require: true
-    }
+        required: true
+    },
 });
 
 module.exports = mongoose.model("Entry", entrySchema);

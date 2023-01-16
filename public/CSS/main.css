@@ -67,3 +67,10 @@ body{
     text-decoration: none;
     font-size: 1.5em;
 }
+
+
+/* image sizing */
+
+.image{
+    width: 20%;
+}
