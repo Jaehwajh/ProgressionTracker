@@ -20,17 +20,17 @@
 
         <div class="dashboard">
             <div class="box" >
+                <% const arr = entries.concat(works) %> 
                 <h1>This is dashboard</h1>
 
-                <h2>Welcome back <%= user.userName %> you've made [number] entries this month</h2>
+                <h2>Welcome back <%= user.userName %></h2>
 
                 <div class="works">
                     <h1 class="title">*Display Work (current month)*</h1>
 
-                    <% const arr = entries.concat(works) %> 
-
                     <% arr.forEach(element => {%>
-                        <p><%= element.title %> <br> <%= element.createdAt %> <br> <img class="image" src="<%= element.image %>" alt=""> </p>
+                        <p><%= element.title %> <br> <%= element.createdAt %> <br> <%= element.description %> </p> 
+                        <br> <img class="image" src="<%= element.image %>">
                     <%})%>
                 </div>
 
