@@ -1,7 +1,7 @@
 body{
     font-size: 62.5%;
     margin: 0;
-
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
 }
 
 /* container */
@@ -73,5 +73,15 @@ body{
 
 .image{
     width: 20%;
+}
+
+/* title container */
+
+.imgContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    height: 100vh;
+    background-color: aliceblue;
 }
 
