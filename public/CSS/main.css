@@ -76,12 +76,74 @@ body{
 }
 
 /* title container */
+#homepageContainer{
+    height: 100vh;
+}
 
 .imgContainer{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    height: 100vh;
-    background-color: aliceblue;
+    background-color: rgb(59, 59, 59);
+    height: 95%;
 }
 
+.titleContent{
+    padding-top: 60%;
+    text-align: center;
+    color: aliceblue;
+}
+
+.titleContent > h1 {
+    font-weight: 600;
+    font-size: 4.5rem;
+    margin: 0;
+}
+
+.titleSubContent > h2{
+    font-weight: 300;
+    font-size: 2rem;
+    margin: 0;
+    padding-bottom: 1%;
+}
+
+.linkList{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linkList > a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: rgb(160, 209, 253);
+}
+
+.linkList > a:hover{
+    color: aliceblue;
+}
+
+.space{
+    padding-right: 25px;
+}
+
+/* Footer */
+
+.footerSection {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgb(29, 29, 29);
+    height: 5%;
+}
+
+.pd{
+    padding-left: 2%;
+}
+
+.copyRight{
+    padding-right: 10%;
+    font-size: 1.5em;
+    color: aliceblue;
+    font-weight: 300;
+}
