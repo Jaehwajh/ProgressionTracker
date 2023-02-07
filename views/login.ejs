@@ -2,19 +2,13 @@
 <main class="loginContainer">
 
     <div>
-      <h2 class="gradient flow">Flow</h2>
+      <h2 class="gradient flow"><a href="/">Flow</a></h2>
     </div>
     
     <div class="loginContent">
 
       <section class="input">
-        <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
-        <div class="alert alert-danger"><%= el.msg %></div>
-        <% }) %> <% } %> 
-        <% if (locals.messages.info) { %> <%
-        messages.info.forEach( el => { %>
-        <div class="alert alert-info"><%= el.msg %></div>
-        <% }) %> <% } %>
+
 
         <div class="text">
           <h1>Sign in to get started</h1>
@@ -22,6 +16,20 @@
           <h3 class="lines">or</h3>
 
           <h2><a class="link" href="/signup">Create an Account</a></h2>
+        </div>
+
+        <div class="error">
+          <% if (locals.messages.errors) { %> 
+              <% messages.errors.forEach( el => { %>
+                <div class="alert alert-danger"><%= el.msg %></div>
+            <% }) %> 
+          <% } %> 
+
+          <% if (locals.messages.info) { %> 
+              <% messages.info.forEach( el => { %>
+                <div class="alert alert-info"><%= el.msg %></div>
+            <% }) %> 
+          <% } %>
         </div>
 
         <form action="/login" method="POST" class="formContainer">

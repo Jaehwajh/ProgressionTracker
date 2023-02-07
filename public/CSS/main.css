@@ -223,7 +223,7 @@ body{
 
 /* Forms */
 .formContainer{
-    padding-top: 10%;
+    padding-top: 7%;
 }
 
 .form-label{
@@ -261,4 +261,24 @@ body{
 
 input:focus{
     outline-color:rgb(160, 209, 253) ;
+}
+
+.error{
+    font-size: 1.4em;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(255, 131, 131);
+    margin-top: 5%;
+}
+
+/* Sign Up Page */
+
+.form-text{
+    font-size: 1.3em;
+}
+
+.sign-up{
+    background-color:rgb(29, 29, 29);
+    border-radius: 10px;
+    height: 650px;
+    width: 30%;
 }
