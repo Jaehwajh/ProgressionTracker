@@ -157,3 +157,108 @@ body{
     color: aliceblue;
     font-weight: 300;
 }
+
+/* Login Page */
+
+.loginContainer{
+    background-color: rgb(59, 59, 59) ;
+    height: 100vh;
+}
+
+.loginContent{
+    color: aliceblue;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.input{
+    background-color:rgb(29, 29, 29);
+    border-radius: 10px;
+    height: 600px;
+    width: 30%;
+}
+
+.flow{
+    margin: 0;
+    font-size: 3em;
+    text-align: center;
+    padding: 2% 0 5% 0;
+}
+
+.lines{
+    display: flex;
+    flex-direction: row;
+    padding: 0 30%;
+}
+
+.lines:before, .lines:after{
+    content: "";
+    flex: 1 1;
+    width: 10px;
+    border-bottom: 1px solid aliceblue;
+    margin: auto;
+}
+
+.text > h1{
+    font-size: 4em;
+    font-weight: 300;
+}
+
+.text > h3{
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.link{
+    text-decoration: none;
+    color: rgb(160, 209, 253);
+    font-size: 1.2em;
+}
+
+.link:hover{
+    color: aliceblue ;
+    transition-duration: .5s;
+}
+
+/* Forms */
+.formContainer{
+    padding-top: 10%;
+}
+
+.form-label{
+    font-size: 1.7em;
+    font-weight: 300;
+}
+
+.form-layout{
+    padding-top: 5%;
+    padding-left: 20%;
+    text-align: left;
+}
+
+.form-control{
+    width: 75%;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.btn-primary{
+    margin-top: 10%;
+    width: 35%;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 1.5em;
+    font-weight: 600;
+    border: transparent;
+}
+
+.btn-primary:hover{
+    background-color: rgb(160, 209, 253);
+    cursor: pointer;
+    transition-duration: .25s;
+}
+
+input:focus{
+    outline-color:rgb(160, 209, 253) ;
+}
