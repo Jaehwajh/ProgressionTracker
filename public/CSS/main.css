@@ -13,23 +13,42 @@ body{
 /* navigation bar */
 .sidebar{
     height:100vh;
-    background-color: gray;
+    box-shadow: 0px 10px 15px 10px rgb(0 0 0 / 15%);
+    background-color: rgb(29, 29, 29); 
+    border-radius: 10px;
 }
+
+
+
 .flex-nav{
     display: flex;
     flex-direction: column;
 }
-.navi{
-    font-size: 1.5rem;
-}
 
 .list{
     list-style: none;
-    padding: 0 20px;
+    padding: 0 25px;
 }
 .list > li > a{
     text-decoration: none;
     font-size: .8em;
+}
+
+.icons{
+    color: aliceblue;
+}
+
+.icons:hover{
+    color:rgb(131, 197, 255) ;
+    transition-duration: .25s;
+}
+
+.icon-space{
+    padding-top: 30px;
+}
+
+.logout-icon{
+    margin-top: 630px;
 }
 
 /* dashboard */
@@ -165,15 +184,18 @@ body{
     height: 100vh;
 }
 
+
+
 .loginContent{
-    color: aliceblue;
-    text-align: center;
     display: flex;
     justify-content: center;
+    color: aliceblue;
+    text-align: center;
 }
 
 .input{
     background-color:rgb(29, 29, 29);
+    box-shadow: 0px 10px 15px 10px rgb(0 0 0 / 15%);
     border-radius: 10px;
     height: 600px;
     width: 30%;
@@ -278,6 +300,7 @@ input:focus{
 
 .sign-up{
     background-color:rgb(29, 29, 29);
+    box-shadow: 0px 10px 15px 10px rgb(0 0 0 / 15%);
     border-radius: 10px;
     height: 650px;
     width: 30%;
