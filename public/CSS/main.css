@@ -8,47 +8,72 @@ body{
 .container{
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 /* navigation bar */
-.sidebar{
-    height:100vh;
+
+.navi{
+    width: 4.5rem;
+    height: 100vh;
     box-shadow: 0px 10px 15px 10px rgb(0 0 0 / 15%);
     background-color: rgb(29, 29, 29); 
     border-radius: 10px;
+    position: fixed;
+    transition: width 500ms ease;
 }
 
+.navi:hover{
+    width: 14rem;
+}
 
-
-.flex-nav{
+.nav-item{
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
+
+.link-text{
+    margin-left: 1rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
 
 .list{
     list-style: none;
     padding: 0 25px;
-}
-.list > li > a{
-    text-decoration: none;
-    font-size: .8em;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .icons{
+    display: flex;
+    align-items: center;
+    height: 5rem;
     color: aliceblue;
+    text-decoration: none;
 }
 
 .icons:hover{
-    color:rgb(131, 197, 255) ;
+    color:rgb(131, 197, 255);
     transition-duration: .25s;
 }
 
-.icon-space{
-    padding-top: 30px;
-}
 
 .logout-icon{
-    margin-top: 630px;
+    margin-top: auto;
+}
+
+@media only screen and (min-width: 600px) {
+    .navi:hover .link-text{
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
 /* dashboard */
