@@ -71,8 +71,9 @@
                             </div>
 
                             <div class="current-date-box">
-                                <% const today = new Date().toString().slice(0,15) %> 
-                                <span class="current-date"> Today is <%= today %>.</span>
+                                <% const today = new Date().toString().slice(7,15) %> 
+                                <% const month = new Date().toLocaleString('default', {month: 'long'}) %>
+                                <span class="current-date"> Today is <%= month + today %>.</span>
                             </div>
                         </div>
                     </div>
@@ -82,7 +83,7 @@
                             <div class="current-works">
                                 <% const arr = entries.concat(works) %> 
 
-                                    <h1 class="title">*Display Work (current month)*</h1>
+                                    <h1 class="current-month-entries"> <%= month %>'s Entries</h1>
 
                                 <div class="entries-table">
                                     <% arr.forEach(element => {%>
