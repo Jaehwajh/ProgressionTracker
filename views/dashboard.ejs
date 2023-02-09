@@ -16,6 +16,23 @@
                                     </li>
                                     <li class="nav-item">
                                         <a class="icons" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-collection" viewBox="0 0 16 16">
+                                                <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13z"/>
+                                            </svg>
+                                            <h2 class="link-text">Entries</h2>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="icons" href="#">
+                                            <svg class="icon-space" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-square" viewBox="0 0 16 16">
+                                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                                <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z"/>
+                                            </svg>
+                                            <h2 class="link-text">Todo</h2>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="icons" href="#">
                                             <svg class="icon-space" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
                                                 <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
                                                 <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
@@ -29,15 +46,6 @@
                                                 <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0Zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07Z"/>
                                             </svg>
                                             <h2 class="link-text">Statistics</h2>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="icons" href="#">
-                                            <svg class="icon-space" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-square" viewBox="0 0 16 16">
-                                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                                                <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z"/>
-                                            </svg>
-                                            <h2 class="link-text">Todo</h2>
                                         </a>
                                     </li>
                                     <li class="logout-icon nav-item">
@@ -54,33 +62,57 @@
                         </div>
             </div>
 
-                <!-- <div class="dashboard">
-                    <div class="box" >
-                        <% const arr = entries.concat(works) %> 
-                        <h1>This is dashboard</h1>
+                <div class="dashboard-container">
 
-                        <h2>Welcome back <%= user.userName %></h2>
+                    <div class="welcome-box">
+                        <div class="welcome-time">
+                            <div class="welcome-message">
+                                <h2 class="user-message">Welcome back, <%= user.userName %>!</h2>
+                            </div>
 
-                        <div class="works">
-                            <h1 class="title">*Display Work (current month)*</h1>
-
-                            <% arr.forEach(element => {%>
-                                <p><%= element.title %> <br> <%= element.createdAt %> <br> <%= element.description %> </p> 
-                                <br> <img class="image" src="<%= element.image %>">
-                            <%})%>
+                            <div class="current-date-box">
+                                <% const today = new Date().toString().slice(0,15) %> 
+                                <span class="current-date"> Today is <%= today %>.</span>
+                            </div>
                         </div>
-
-                        <div class="pastWorks">
-                            <h1 class="title">*Last months work*</h1>
-                        </div>
-
-                        <a class="viewMore" href="#">View more</a>
-
-
                     </div>
 
-                    <button class="add"><a href="/new"><h1>+</h1></a></button>
-                </div> -->
+                    <div class="dashboard">
+                        <div class="box">
+                            <div class="current-works">
+                                <% const arr = entries.concat(works) %> 
+
+                                    <h1 class="title">*Display Work (current month)*</h1>
+
+                                <div class="entries-table">
+                                    <% arr.forEach(element => {%>
+                                        <div class="works">
+                                            <p><%= element.title %> 
+                                            <br> 
+                                            <%= element.createdAt %> 
+                                            <br>
+                                            <%= element.description %></p> 
+                                            <br> 
+                                            <img class="image" src="<%= element.image %>">
+                                        </div>
+                                    <%})%>
+                                </div>
+                            </div>
+
+                            <div class="pastWorks">
+                                    <!-- <h1 class="title">*Last months work*</h1> -->
+                            </div>
+
+                            <!-- <a class="viewMore" href="#">View more</a> -->
+                        </div>
+
+                        <div class="todo-box">
+
+                        </div>
+                    </div>
+
+                    <!-- <button class="add"><a href="/new"><h1>+</h1></a></button> -->
+                </div>
         </div>
     </div>
 
