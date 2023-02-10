@@ -21,6 +21,7 @@ body{
     border-radius: 10px;
     position: fixed;
     transition: width 500ms ease;
+    z-index: 5;
 }
 
 .navi:hover{
@@ -77,6 +78,11 @@ body{
 }
 
 /* dashboard */
+.main-board{
+    /* background-image: linear-gradient(60deg, rgb(131, 197, 255), rgb(59, 59, 59)); */
+    background-color: rgb(182, 196, 209);
+}
+
 .dashboard-container{
     height: 100vh;
 }
@@ -144,22 +150,30 @@ body{
 .current-month-entries{
     margin-left: 1rem;
     margin-bottom: 2rem;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .current-works{
-    background-color: aliceblue;
+    -webkit-backdrop-filter: blur(8px);  /* Safari 9+ */
+    backdrop-filter: blur(8px); /* Chrome and Opera */
     box-shadow: 0px 10px 15px 10px rgb(0 0 0 / 15%);
+    background-color: rgb(228 228 228 / 15%); 
     height: 95%;
     border: 1px solid transparent;
     border-radius: 5px;
+    z-index: 1;
 }
 
 .pastWorks{
     height: 5%;
-    border: 1px solid pink;
+    border: 1px solid transparent;
+    -webkit-backdrop-filter: blur(8px);  /* Safari 9+ */
+    backdrop-filter: blur(8px); /* Chrome and Opera */
+    box-shadow: 0px 10px 15px 10px rgb(0 0 0 / 15%);
+    background-color: rgb(228 228 228 / 15%); 
     border-radius: 5px;
 }
+
 
 .add{
     position: relative;
@@ -185,15 +199,18 @@ body{
 .entries-table{
     margin: 0 1rem;
     display: flex;
+    flex-direction: column;
     column-gap: 1rem;
     row-gap: 2rem;
     flex-wrap: wrap;
 }
 
 .works{
-    border: 1px solid rgb(172, 172, 172);
+    border: 1px solid transparent;
+    background-color: aliceblue;
+    box-shadow: 0px 10px 10px 5px rgb(0 0 0 / 15%);
     border-radius: 5px;
-    width: auto;
+    width: 30%;
     flex: 1;
 }
 
