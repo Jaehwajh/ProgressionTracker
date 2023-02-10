@@ -88,15 +88,17 @@
 
                                 <div class="entries-table" id="current-entries">
                                     <% arr.forEach(element => {%>
-                                        <div class="works">
-                                            <p><%= element.title %> 
-                                            <br> 
-                                            <%= element.createdAt %> 
-                                            <br>
-                                            <%= element.description %></p> 
-                                            <br> 
-                                            <img class="image" src="<%= element.image %>">
-                                        </div>
+                                        <% if(element.createdAt.toLocaleString('default', {month: 'long'}) === new Date().toLocaleString('default', {month: 'long'})){ %>
+                                            <div class="works">
+                                                <p><%= element.title %> 
+                                                <br> 
+                                                <%= element.createdAt %>
+                                                <br>
+                                                <%= element.description %></p> 
+                                                <br> 
+                                                <img class="image" src="<%= element.image %>">
+                                            </div>
+                                       <% }%> 
                                     <%})%>
                                 </div>
                             </div>
@@ -105,8 +107,19 @@
                                     <h1 class="current-month-entries">Last Month's Entries</h1>
 
                                     <div class="entries-table" id="past-entries">
-
-
+                                        <% arr.forEach(element => {%>
+                                            <% if(element.createdAt.getMonth() === new Date().getMonth()-1){ %>
+                                                <div class="works">
+                                                    <p><%= element.title %> 
+                                                    <br> 
+                                                    <%= element.createdAt %>
+                                                    <br>
+                                                    <%= element.description %></p> 
+                                                    <br> 
+                                                    <img class="image" src="<%= element.image %>">
+                                                </div>
+                                           <% }%> 
+                                        <%})%>
                                     </div>
                             </div>
 
@@ -114,7 +127,15 @@
                         </div>
 
                         <div class="todo-box">
+                            <div class="todo-summary">
+                                <div class="summary">
+                                    <h1 class = "current-month-entries">Today's To-do</h1>
+                                </div>
 
+                                <div>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 

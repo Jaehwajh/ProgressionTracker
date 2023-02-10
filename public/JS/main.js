@@ -3,9 +3,6 @@ const getCurrent = document.getElementById("current");
 const hideEntries = document.getElementById("current-entries");
 const hidePastEntries = document.getElementById("past-entries");
 
-// Animation
-
-
 
 function showPast(){
     if(getPast.style.height <= "5%"){
@@ -24,4 +21,5 @@ function showCurrent(){
         hideEntries.style.display = "flex"
     }
 }
+
 
