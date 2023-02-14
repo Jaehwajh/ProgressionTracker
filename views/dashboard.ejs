@@ -106,7 +106,7 @@
                             <div class="pastWorks" id="past" onclick="showPast()">
                                     <h1 class="current-month-entries">Last Month's Entries</h1>
 
-                                    <div class="entries-table" id="past-entries">
+                                    <div class="entries-table last-month-entries" id="past-entries">
                                         <% arr.forEach(element => {%>
                                             <% if(element.createdAt.getMonth() === new Date().getMonth()-1){ %>
                                                 <div class="works">

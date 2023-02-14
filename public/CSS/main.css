@@ -179,6 +179,10 @@ body{
     border-radius: 5px;
 }
 
+#past-entries{
+    display: none;
+}
+
 
 .add{
     position: relative;
