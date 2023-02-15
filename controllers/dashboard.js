@@ -12,6 +12,13 @@ module.exports = {
             console.log(err);
         }
     },
+    getEntries: async (req, res) => {
+        try {
+            res.render("entries.ejs", {user: req.user});
+        } catch(err){
+            console.log(err);
+        }
+    },
     newEntry: async (req, res) => {
         try{
             res.render("newWork.ejs");

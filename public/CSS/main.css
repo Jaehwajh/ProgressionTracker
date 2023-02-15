@@ -183,19 +183,30 @@ body{
     display: none;
 }
 
+.split{
+    display: flex;
+    flex-direction: row;
+}
 
 .add{
     position: relative;
-    padding: 8px 15px;
-    border: 1.8px solid rgb(67, 67, 255);
-    border-radius: 5px;
-    z-index: 1;
-    left: 95%;
-    bottom: 85%;
+    padding: 0;
+    height: 35px;
+    width: 35px;
+    font-size: 2rem;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: rgb(29, 29, 29);
+    margin: 1px 1% 0 auto;
 }
 
-.add > h1{
-    margin: 0;
+.add > a{
+    text-decoration: none;
+    color:aliceblue;
+}
+
+.add > a:hover{
+    color: rgb(131, 197, 255);
 }
 
 .viewMore{
