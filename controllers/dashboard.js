@@ -1,13 +1,11 @@
 const Work = require("../models/works");
-const Entry = require("../models/entries");
 const cloudinary = require("../middleware/cloudinary");
 
 module.exports = {
     getDashboard: async (req, res) => {
         try {
-            const entries = await Entry.find({ user: req.user.id });
             const works = await Work.find({ user: req.user.id });
-            res.render("dashboard.ejs", {user: req.user, entries: entries, works: works});
+            res.render("dashboard.ejs", {user: req.user, works: works});
         } catch(err){
             console.log(err);
         }

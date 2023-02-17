@@ -83,7 +83,6 @@
 
                         <div class="box">
                             <div class="current-works" id="current" onclick="showCurrent()">
-                                <% const arr = entries.concat(works) %> 
 
                                 <div class="split">
                                     <h1 class="current-month-entries"> <%= month %>'s Entries</h1>
@@ -92,7 +91,7 @@
                                 </div>
 
                                 <div class="entries-table" id="current-entries">
-                                    <% arr.forEach(element => {%>
+                                    <% works.forEach(element => {%>
                                         <% if(element.createdAt.toLocaleString('default', {month: 'long'}) === new Date().toLocaleString('default', {month: 'long'})){ %>
                                             <div class="works">
                                                 <p><%= element.title %> 
@@ -112,7 +111,7 @@
                                     <h1 class="current-month-entries">Last Month's Entries</h1>
 
                                     <div class="entries-table last-month-entries" id="past-entries">
-                                        <% arr.forEach(element => {%>
+                                        <% works.forEach(element => {%>
                                             <% if(element.createdAt.getMonth() === new Date().getMonth()-1){ %>
                                                 <div class="works">
                                                     <p><%= element.title %> 
