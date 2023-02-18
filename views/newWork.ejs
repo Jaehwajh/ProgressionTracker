@@ -1,17 +1,7 @@
 <%- include('partials/header') -%>
-
-    <div>
-        <h1>What do you want to do?</h1>
     
-        <button>Upload File</button>
-    
-        <button>Make Entry</button>
-    </div>
-    
-    
-    <!--Upload Image -->
     <div class="mt-5">
-        <h2>Upload a file</h2>
+        <h2>Make an entry</h2>
         <form action="/entry/createFile" enctype="multipart/form-data" method="POST">
           <div class="mb-3">
             <label for="fileUpload" class="form-label">File</label>
@@ -37,25 +27,5 @@
         </form>
       </div>
     
-    
-      <!-- Entries -->
-      <!-- <div class="mt-5">
-        <h2>Make an Entry</h2>
-        <form action="/entry/createEntry" method="POST">
-          <div class="mb-3">
-              <label for="title" class="form-label">Title</label>
-              <input type="text" class="form-control" id="title" name="title">
-          </div>
-          <div class="mb-3">
-            <label for="tag" class="form-label">Tag</label>
-            <input type="text" class="form-control" id="tag" name="tag">
-        </div>
-          <div class="mb-3">
-            <label for="description" class="form-label">Description</label>
-            <textarea class="form-control" id="description" name="description"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
-        </form>
-      </div> -->
     
 <%- include("partials/footer") -%> 
