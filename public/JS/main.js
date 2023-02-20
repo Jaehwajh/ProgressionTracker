@@ -23,3 +23,6 @@ function showCurrent(){
 }
 
 
+// Modal View
+let modal = document.getElementById("modal");
+

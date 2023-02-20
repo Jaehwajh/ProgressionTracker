@@ -21,7 +21,7 @@ body{
     border-radius: 10px;
     position: fixed;
     transition: width 500ms ease;
-    z-index: 5;
+    z-index: 3;
 }
 
 .navi:hover{
@@ -455,4 +455,24 @@ input:focus{
     border-radius: 10px;
     height: 40rem;
     width: 30%;
+}
+
+
+/*Entry Modal View*/
+
+.description-size{
+    height: 5rem;
+    resize: none;
+}
+
+.description-size:focus{
+    outline-color:rgb(160, 209, 253) ;
+}
+
+.modal{
+    z-index: 3;
+}
+
+.hidden{
+    display: none;
 }

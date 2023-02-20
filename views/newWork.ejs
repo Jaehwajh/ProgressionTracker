@@ -1,31 +1,46 @@
 <%- include('partials/header') -%>
     
-    <div class="mt-5">
-        <h2>Make an entry</h2>
-        <form action="/entry/createFile" enctype="multipart/form-data" method="POST">
-          <div class="mb-3">
+    <div>
+      <div class="loginContent modal">    
+        
+        <div class="input">
+        <form action="/entry/createFile" enctype="multipart/form-data" class="formContainer" method="POST">
+
+          <div class="form-layout">
             <label for="fileUpload" class="form-label">File</label>
+            <br>
             <input type="file" class="form-control" id="fileUpload" name="file">
           </div>
-          <div class="mb-3">
+          
+          <div class="form-layout">
               <label for="title" class="form-label">Title</label>
+              <br>
               <input type="text" class="form-control" id="title" name="title">
           </div>
-          <div class="mb-3">
+
+          <div class="form-layout">
             <label for="tag" class="form-label">Tag</label>
-            <input type="text" class="form-control" id="tag" name="tag">
+            <br>
+            <input type="text" class="form-control" id="tag" name="tag" placeholder="ie. project, lifestyle">
           </div>
-          <div class="mb-3">
+
+          <div class="form-layout">
             <label for="link" class="form-label">Link</label>
+            <br>
             <input type="link" class="form-control" id="link" name="link" placeholder="optional">
           </div>
-          <div class="mb-3">
+
+          <div class="form-layout">
             <label for="description" class="form-label">Description</label>
-            <textarea class="form-control" id="description" name="description"></textarea>
+            <br>
+            <textarea class="form-control description-size" id="description" name="description"></textarea>
           </div>
           <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
         </form>
+
+        </div>
       </div>
+    </div>
     
     
 <%- include("partials/footer") -%> 
