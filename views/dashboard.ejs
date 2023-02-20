@@ -61,6 +61,7 @@
                             </nav>
                         </div>
             </div>
+            
 
                 <div class="dashboard-container">
 
@@ -87,7 +88,7 @@
                                 <div class="split">
                                     <h1 class="current-month-entries"> <%= month %>'s Entries</h1>
 
-                                    <button class="add"><a href="/new">+</a></button>
+                                    <button class="add"><a onclick="modalView()">+</a></button>
                                 </div>
 
                                 <div class="entries-table" id="current-entries">
@@ -148,13 +149,15 @@
                     
                 </div>
         </div>
-</div>
-
 <!-- Modal View -->
-<div>
-    <div class="loginContent modal hidden">    
+        
+    <div class="modal hidden" id="modal">    
       
-      <div class="input">
+      <div class="modal-input">
+
+            <button class="add"><a id="close-modal">x</a></button>
+
+
       <form action="/entry/createFile" enctype="multipart/form-data" class="formContainer" method="POST">
 
         <div class="form-layout">
@@ -186,10 +189,14 @@
           <br>
           <textarea class="form-control description-size" id="description" name="description"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+
+        <button type="submit" class="modal-btn" value="Upload">Submit</button>
+
       </form>
 
       </div>
     </div>
-  </div>
+</div>
+
+
 <%- include("partials/footer") -%> 

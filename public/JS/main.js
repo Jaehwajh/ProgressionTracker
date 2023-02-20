@@ -24,5 +24,18 @@ function showCurrent(){
 
 
 // Modal View
-let modal = document.getElementById("modal");
+const modal = document.getElementById("modal");
+const closeModal = document.getElementById("close-modal");
+
+function modalView(){
+    modal.classList.remove("hidden")
+}
+
+// Clearing modal
+function clearModal(){
+    modal.classList.add("hidden")
+}
+
+closeModal.addEventListener("click", clearModal);
+
 
