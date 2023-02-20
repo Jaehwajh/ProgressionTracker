@@ -499,4 +499,9 @@ input:focus{
     font-size: 1.5em;
     font-weight: 600;
     border: transparent;
+    cursor: pointer;
+}
+
+.modal-btn:hover{
+    background-color: rgb(160, 209, 253) ;
 }
