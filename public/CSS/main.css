@@ -217,12 +217,10 @@ body{
 /* Display Entries */
 
 .entries-table{
-    margin: 0 1rem;
     display: flex;
-    flex-direction: column;
-    column-gap: 1rem;
-    row-gap: 2rem;
+    align-content: flex-start;
     flex-wrap: wrap;
+    height: 85%;
 }
 
 .works{
@@ -230,8 +228,9 @@ body{
     background-color: aliceblue;
     box-shadow: 0px 10px 10px 5px rgb(0 0 0 / 15%);
     border-radius: 5px;
-    width: 30%;
-    flex: 1;
+    width: 22%;
+    height: 25%;
+    margin: 1.2rem 0 0 1.8rem;
 }
 
 /* Todo Dashboard */

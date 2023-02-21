@@ -13,6 +13,9 @@ const todoSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    completed: {
+        type: Boolean,
+    }
 });
 
 module.exports = mongoose.model("Todo", todoSchema);
