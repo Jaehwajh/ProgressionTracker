@@ -26,18 +26,19 @@ module.exports = {
     },
     createEntryFile: async (req, res) => {
         try{
-            const result = await cloudinary.uploader.upload(req.file.path);
+            let result = await cloudinary.uploader.upload(req.file.path);
 
             await Work.create({
                 title: req.body.title,
                 tag: req.body.tag,
                 description: req.body.description,
                 image: result.secure_url,
-                cloudinaryId : result.public_id,
+                cloudinaryId: result.public_id,
                 user: req.user.id,
             });
             console.log("Entry created");
             res.redirect("/dashboard");
+
         }catch(err){
             console.log(err);
         };

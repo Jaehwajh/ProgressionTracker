@@ -5,7 +5,6 @@ const dashboardController = require("../controllers/dashboard");
 const { ensureAuth, ensureGuest } = require("../middleware/auth")
 
 
-
 // Create file entry
 router.post("/createFile", upload.single("file"), dashboardController.createEntryFile);
 // Delete file entry
