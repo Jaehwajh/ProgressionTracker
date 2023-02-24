@@ -17,7 +17,6 @@ router.get("/signup", authController.getSignup);
 router.post("/signup", authController.postSignup);
 
 router.get("/dashboard", ensureAuth, dashboardController.getDashboard);
-router.get("/new", dashboardController.newEntry);
 
 router.get("/entries", ensureAuth, dashboardController.getEntries);
 

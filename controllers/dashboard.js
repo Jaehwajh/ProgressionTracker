@@ -17,13 +17,6 @@ module.exports = {
             console.log(err);
         }
     },
-    newEntry: async (req, res) => {
-        try{
-            res.render("newWork.ejs");
-        }catch(err){
-            console.log(err);
-        }
-    },
     createEntryFile: async (req, res) => {
         try{
             let result = await cloudinary.uploader.upload(req.file.path);
