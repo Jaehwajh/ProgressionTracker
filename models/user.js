@@ -9,8 +9,13 @@ const UserSchema = new mongoose.Schema({
     email: {
         type: String, 
         unique: true
+    }, 
+    createdAt: {
+      type: String,
+      default: Date.now
     },
     password: String,
+
 });
 
 //Password hash middleware

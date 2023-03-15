@@ -62,8 +62,35 @@
 </div>
 
     <div class="dashboard-container">
-        <div>
-            
+        <div class="display-options">
+            <input type="date" id="date">
+        </div>
+        <div class="entries-dashboard">
+            <div class="box">
+                            <div class="current-works" id="current" onclick="showCurrent()">
+
+                                <div class="split">
+                                    <h1 class="current-month-entries"> <%= month %>'s Entries</h1>
+
+                                    <button class="add"><a onclick="modalView()">+</a></button>
+                                </div>
+
+                                <div class="entries-table" id="current-entries">
+                                    <% works.forEach(element => {%>
+                                        <% if(element.createdAt.toLocaleString('default', {month: 'long'}) === new Date().toLocaleString('default', {month: 'long'})){ %>
+                                            <div class="works">
+                                                <p><%= element.title %> 
+                                                <br> 
+                                                <%= element.createdAt %>
+                                                <br>
+                                                <%= element.description %></p> 
+                                                <br> 
+                                                <img class="image" src="<%= element.image %>">
+                                            </div>
+                                       <% }%> 
+                                    <%})%>
+                                </div>
+                            </div>
         </div>
     </div>
 </div>
