@@ -63,11 +63,14 @@
 
     <div class="dashboard-container">
         <div class="display-options">
-            <input type="date" id="date" min="<%= user.createdAt %>">
+            <!-- Javascript function display entries based on date picked -->
+            <input type="date" id="date" min="<%= user.createdAt %>"> 
         </div>
         <div class="entries-dashboard">
             <div class="box">
-                            <div class="current-works" id="current" onclick="showCurrent()">
+                <!-- If else statement, based on date picked -> display entries else display current months entries -->
+                            <% const month = new Date().toLocaleString('default', {month: 'long'}) %>
+                            <div class="current-works" id="current">
 
                                 <div class="split">
                                     <h1 class="current-month-entries"> <%= month %>'s Entries</h1>
