@@ -10,4 +10,7 @@ router.post("/createFile", upload.single("file"), dashboardController.createEntr
 // Delete file entry
 router.delete("/deleteFile/:id", dashboardController.deleteWork);
 
+// Create Todo Entry
+router.post("/createTodo", dashboardController.createTodo);
+
 module.exports = router;

@@ -1,5 +1,6 @@
 const Work = require("../models/works");
 const cloudinary = require("../middleware/cloudinary");
+const { TopologyDescription } = require("mongodb");
 
 module.exports = {
     getDashboard: async (req, res) => {
@@ -45,6 +46,28 @@ module.exports = {
             res.redirect("/dashboard");
         }catch(err){
             res.redirect("/dashboard");
+        }
+    },
+    createTodo: async (req, res) => {
+        try{
+            await Todo.create({
+                todo: req.body.todo,
+                user: req.user.id,
+            });
+
+            console.log("Todo created");
+            res.redirect("/dashboard");
+        }catch(err){
+            console.log(err);
+        }
+    },
+    deleteTodo: async (req, res) => {
+        try{
+            await Todo.remove({ _id: req.params.id });
+            console.log("Todo deleted");
+            res.redirect("/dashboard");
+        }catch(err){
+            console.log("/dashboard");
         }
     },
 };

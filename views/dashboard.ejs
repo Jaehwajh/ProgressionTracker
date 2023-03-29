@@ -139,7 +139,7 @@
                                     <!-- <button class="add"><a href="#">+</a></button> -->
                                 </div>
 
-                                <div>
+                                <div class="todo-list">
 
                                 </div>
                             </div>
@@ -197,8 +197,29 @@
       </div>
     </div>
 
-    <!-- Modal View -->
-
+    <!-- Modal View Todo-->
+     
+    <div class="todo-modal hidden" id="todo-modal">    
+      
+        <div class="modal-input">
+  
+              <button class="add"><a id="close-modal">x</a></button>
+  
+  
+        <form action="/entry/createFile" enctype="multipart/form-data" class="formContainer" method="POST">
+          
+          <div class="form-layout">
+              <label for="todo" class="form-label">Todo</label>
+              <br>
+              <input type="text" class="form-control" id="todo" name="todo">
+          </div>
+  
+          <button type="submit" class="modal-btn" value="Upload">Submit</button>
+  
+        </form>
+  
+        </div>
+      </div>
 
     <!-- Motivational Quotes -->
     <div class="motivational-modal hidden" id="modal">
