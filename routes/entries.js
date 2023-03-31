@@ -12,5 +12,7 @@ router.delete("/deleteFile/:id", dashboardController.deleteWork);
 
 // Create Todo Entry
 router.post("/createTodo", dashboardController.createTodo);
+// Delete Todo Entry
+router.delete("/deleteTodo", dashboardController.deleteTodo);
 
 module.exports = router;
