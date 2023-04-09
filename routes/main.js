@@ -7,6 +7,8 @@ const dashboardController = require("../controllers/dashboard");
 
 // Loading Homepage
 router.get("/", homepageController.getHomepage);
+router.get("/about", homepageController.getAbout);
+router.get("/howto", homepageController.getHowTo);
 
 router.get("/login", authController.getLogin);
 router.post("/login", authController.postLogin);
