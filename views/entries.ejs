@@ -93,6 +93,29 @@
                                 </div>
                             </div>
         </div>
+
+        <div class="previous-box">
+                            <div class="split">
+                                <h1 class="current-month-entries">Last Month's Entries</h1>
+                            </div>
+
+
+                            <div class="entries-table last-month-entries" id="past-entries">
+                                <% works.forEach(element => {%>
+                                    <% if(element.createdAt.getMonth() === new Date().getMonth()-1){ %>
+                                        <div class="works">
+                                            <p><%= element.title %> 
+                                            <br> 
+                                            <%= element.createdAt %>
+                                            <br>
+                                            <%= element.description %></p> 
+                                            <br> 
+                                            <img class="image" src="<%= element.image %>">
+                                        </div>
+                                    <% }%> 
+                                <%})%>
+                            </div>
+        </div>
     </div>
 </div>
 <%- include("partials/footer") %> 
