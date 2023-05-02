@@ -141,8 +141,11 @@
 
                                 <div class="todo-list" id="todays-todo">
                                     <% todos.forEach(element => { &>
-                                        <div>
+                                        <div class="todos">
+                                            <p><%= element.todo %>
                                             
+                                            <%= element.createdAt %>
+                                            </p>
                                         </div>
                                    <% })  %>
                                 </div>
